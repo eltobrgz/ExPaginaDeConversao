@@ -1,0 +1,201 @@
+/* Adicionando estilos extras para os novos componentes */
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    list-style: none;
+    text-align: center;
+}
+
+.mobile-menu li {
+    margin-bottom: 20px;
+}
+
+.mobile-menu li a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition-speed);
+}
+
+/* Highlighted Link */
+.highlight-link {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 4px;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+}
+
+.highlight-link:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Secondary Button */
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid #fff;
+    margin-right: 15px;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* CTA Buttons Container */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: -60px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    opacity: 0;
+    z-index: 999;
+    text-decoration: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.back-to-top.show {
+    bottom: 30px;
+    opacity: 1;
+}
+
+.back-to-top:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-5px);
+}
+
+/* Social Icons in Footer - Extended Styles */
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+    transform: translateY(-3px);
+}
+
+/* Footer Links */
+.footer-bottom a {
+    color: #dfe4ea;
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+.footer-bottom a:hover {
+    color: var(--primary-color);
+}
+
+/* Footer Icons */
+.footer-column ul li i {
+    margin-right: 10px;
+    color: var(--accent-color);
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .mobile-menu-overlay {
+        display: flex;
+    }
+}
+
+/* Other Responsive Adjustments */
+@media (max-width: 480px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-column {
+        text-align: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+        right: 15px;
+    }
+    
+    .back-to-top.show {
+        bottom: 15px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    header, 
+    .hero, 
+    .benefits,
+    .cta,
+    footer,
+    .back-to-top {
+        display: none;
+    }
+    
+    .testimonial-slider {
+        display: block;
+    }
+    
+    .testimonial-card {
+        break-inside: avoid;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="60" viewBox="0 0 200 60">
+  <style>
+    .text { 
+      font-family: 'Playfair Display', serif; 
+      font-weight: 700;
+      font-size: 18px;
+      fill: #fff;
+    }
+    .small-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      fill: #fff;
+      font-weight: 500;
+    }
+    .heart {
+      fill: #ff4757;
+      stroke: #fff;
+      stroke-width: 1;
+    }
+    .heart-shine {
+      fill: #ffffff;
+      fill-opacity: 0.3;
+    }
+  </style>
+  <!-- Heart Shape -->
+  <g transform="translate(10, 30) scale(0.8)">
+    <path class="heart" d="M25,9.05C20.5-3.45,-0.5,-1.95,-0.5,12.05C-0.5,20.55,9.5,27.55,25,40.05C40.5,27.55,50.5,20.55,50.5,12.05C50.5,-1.95,29.5,-3.45,25,9.05Z" />
+    <!-- Shine effect on heart -->
+    <path class="heart-shine" d="M15,14C10,9,15,4,15,4C15,4,8,7,15,14Z" />
+  </g>
+  <!-- Text -->
+  <text x="60" y="28" class="text">Obsessão</text>
+  <text x="60" y="48" class="text">Masculina</text>
+  <text x="60" y="15" class="small-text">SEGREDOS DA</text>
+</svg>
