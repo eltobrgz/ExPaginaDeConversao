@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512px" height="128px" viewBox="0 0 512 128" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Payment Methods</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- PIX Icon -->
+        <g transform="translate(40, 32)">
+            <rect fill="#32BCAD" x="0" y="0" width="64" height="64" rx="8"></rect>
+            <path d="M32,16 L48,32 L32,48 L16,32 L32,16 Z" fill="#FFFFFF"></path>
+            <circle fill="#FFFFFF" cx="32" cy="32" r="8"></circle>
+        </g>
+        
+        <!-- Credit Cards -->
+        <g transform="translate(144, 32)">
+            <rect fill="#1A1F71" x="0" y="0" width="64" height="64" rx="8"></rect>
+            <text x="32" y="36" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">CARTÃO</text>
+            <path d="M16,48 L48,48 C50.2,48 52,46.2 52,44 L52,40 L12,40 L12,44 C12,46.2 13.8,48 16,48 Z" fill="#FFFFFF"></path>
+        </g>
+        
+        <!-- Boleto -->
+        <g transform="translate(248, 32)">
+            <rect fill="#4682B4" x="0" y="0" width="64" height="64" rx="8"></rect>
+            <path d="M14,16 L14,48 L18,48 L18,16 L14,16 Z" fill="#FFFFFF"></path>
+            <path d="M22,16 L22,48 L26,48 L26,16 L22,16 Z" fill="#FFFFFF"></path>
+            <path d="M30,16 L30,48 L34,48 L34,16 L30,16 Z" fill="#FFFFFF"></path>
+            <path d="M38,16 L38,48 L42,48 L42,16 L38,16 Z" fill="#FFFFFF"></path>
+            <path d="M46,16 L46,48 L50,48 L50,16 L46,16 Z" fill="#FFFFFF"></path>
+        </g>
+        
+        <!-- Other payment methods -->
+        <g transform="translate(352, 32)">
+            <rect fill="#FF9900" x="0" y="0" width="64" height="64" rx="8"></rect>
+            <text x="32" y="36" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">OUTRAS</text>
+            <text x="32" y="48" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">OPÇÕES</text>
+        </g>
+    </g>
+</svg>
