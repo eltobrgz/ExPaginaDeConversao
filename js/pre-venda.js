@@ -32,7 +32,7 @@ function initQuiz() {
     if (!quizContainer || !quizQuestions.length) return;
     
     let currentQuestion = 0;
-    const totalQuestions = 3; // Reduzido para 3 perguntas
+    const totalQuestions = 5; // Atualizado para 5 perguntas
     
     // Esconde todas as perguntas, exceto a primeira
     quizQuestions.forEach((question, index) => {
