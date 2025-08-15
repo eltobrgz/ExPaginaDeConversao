@@ -2,25 +2,41 @@
  * Segredos da Obsessão Masculina - Estilos da Página de Pré-venda
  */
 
+/* Variables - Consistent with home.html */
+:root {
+    --primary-color: #e61c5d; /* Vermelho/rosa vibrante */
+    --secondary-color: #ff0033; /* Vermelho intenso */
+    --accent-color: #cc0000; /* Vermelho profundo */
+    --dark-accent: #1a0f14; /* Preto sensual */
+    --text-color: #1a0f14; /* Texto escuro */
+    --light-text: #f0f0f0; /* Texto claro */
+    --background-dark: #1a0f14; /* Fundo escuro */
+    --card-bg: #2d1726; /* Fundo dos cartões */
+    --highlight-gradient: linear-gradient(135deg, #e61c5d, #ff0033);
+    --dark-gradient: linear-gradient(135deg, #1a0f14, #2d1726);
+}
+
 /* Base Styles */
 .pre-venda-page {
     font-family: 'Montserrat', sans-serif;
-    color: #333;
+    color: var(--text-color);
     line-height: 1.6;
-    background: #f8f4f8;
+    background: var(--background-dark);
 }
 
 .highlight {
-    color: #e83e8c;
+    color: var(--primary-color);
     font-weight: 700;
+    text-shadow: 0 0 10px rgba(230, 28, 93, 0.5);
 }
 
 /* Header */
 .site-header {
-    background: linear-gradient(135deg, #ff4757 0%, #ff6b81 100%);
+    background: var(--dark-gradient);
     padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 15px rgba(230, 28, 93, 0.3);
     position: relative;
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .site-header .header-container {
@@ -32,6 +48,14 @@
 .site-header .logo {
     display: flex;
     align-items: center;
+    color: var(--light-text);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.site-header .logo:hover {
+    color: var(--primary-color);
 }
 
 .logo-svg {
@@ -41,13 +65,27 @@
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, #5e2a64 0%, #83377b 100%);
-    color: white;
+    background: var(--dark-gradient);
+    color: var(--light-text);
     padding: 120px 0 60px;
     text-align: center;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e61c5d' fill-opacity='0.1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
 }
 
 .hero-section h1 {
+    color: var(--light-text);
+    text-shadow: 0 0 20px rgba(230, 28, 93, 0.7);
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     margin-bottom: 20px;
@@ -60,6 +98,8 @@
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    color: var(--light-text);
+    opacity: 0.9;
 }
 
 .quiz-intro {
@@ -120,16 +160,31 @@
 /* Quiz Section */
 .quiz-section {
     padding: 60px 0;
-    background-color: #fff;
+    background: var(--dark-gradient);
+    position: relative;
+}
+
+.quiz-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23e61c5d' fill-opacity='0.05' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
 }
 
 .quiz-wrapper {
     max-width: 700px;
     margin: 0 auto;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    background: rgba(45, 23, 38, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(230, 28, 93, 0.3);
     padding: 30px;
+    border: 1px solid rgba(230, 28, 93, 0.3);
+    position: relative;
+    z-index: 1;
 }
 
 /* Quiz Progress */
@@ -141,19 +196,22 @@
     font-weight: 600;
     margin-bottom: 8px;
     text-align: center;
+    color: var(--primary-color);
+    font-size: 1.1rem;
 }
 
 .quiz-progress-container {
     height: 8px;
-    background-color: #e9ecef;
+    background-color: rgba(230, 28, 93, 0.2);
     border-radius: 4px;
     overflow: hidden;
 }
 
 .quiz-progress-bar {
     height: 100%;
-    background: linear-gradient(90deg, #5e2a64, #e83e8c);
+    background: var(--highlight-gradient);
     transition: width 0.3s ease;
+    box-shadow: 0 0 10px rgba(230, 28, 93, 0.5);
 }
 
 /* Quiz Questions */
@@ -166,6 +224,7 @@
     margin-bottom: 20px;
     font-weight: 600;
     text-align: center;
+    color: var(--light-text);
 }
 
 .quiz-options {
@@ -176,21 +235,27 @@
 
 .quiz-option {
     padding: 15px 20px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
+    border: 1px solid rgba(230, 28, 93, 0.3);
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
+    background: rgba(26, 15, 20, 0.5);
+    color: var(--light-text);
+    backdrop-filter: blur(5px);
 }
 
 .quiz-option:hover {
-    border-color: #5e2a64;
-    background-color: #f9f4f9;
+    border-color: var(--primary-color);
+    background: rgba(230, 28, 93, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(230, 28, 93, 0.3);
 }
 
 .quiz-option.selected {
-    background-color: #5e2a64;
-    border-color: #5e2a64;
+    background: var(--highlight-gradient);
+    border-color: var(--primary-color);
     color: white;
+    box-shadow: 0 5px 15px rgba(230, 28, 93, 0.4);
 }
 
 .option-text {
@@ -203,6 +268,10 @@
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
+    background: var(--dark-gradient);
+    color: var(--light-text);
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .quiz-result.fade-in {
@@ -211,16 +280,16 @@
 }
 
 .result-header {
-    background-color: #ffecb3;
+    background: var(--highlight-gradient);
     padding: 20px;
-    border-radius: 6px;
-    margin-bottom: 30px;
     text-align: center;
+    border-radius: 15px 15px 0 0;
+    margin-bottom: 0;
 }
 
 .result-header i {
     font-size: 2rem;
-    color: #e83e8c;
+    color: white;
     margin-bottom: 15px;
 }
 
@@ -743,7 +812,7 @@
 /* Call to Action Button */
 .btn-cta {
     display: block;
-    background: linear-gradient(90deg, #e83e8c, #5e2a64);
+    background: var(--highlight-gradient);
     color: white;
     font-size: 1.2rem;
     font-weight: 600;
@@ -754,13 +823,14 @@
     max-width: 100%;
     transition: all 0.3s ease;
     text-decoration: none;
-    box-shadow: 0 5px 15px rgba(232, 62, 140, 0.3);
+    box-shadow: 0 5px 15px rgba(230, 28, 93, 0.4);
     animation: pulse 1.5s infinite;
+    border: none;
 }
 
 .btn-cta:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(232, 62, 140, 0.4);
+    box-shadow: 0 8px 20px rgba(230, 28, 93, 0.6);
     animation-play-state: paused;
 }
 

@@ -33,11 +33,29 @@
     <link rel="stylesheet" href="./css/responsive.css">
     <link rel="stylesheet" href="./css/real-images.css">
     
-    <!-- Facebook Pixel Code -->
-    <!-- Adicionar código de pixel quando disponível -->
-    
-    <!-- Google Tag Manager -->
-    <!-- Adicionar GTM quando disponível -->
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '962970978795398'); // seu ID
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+
+    <!-- UTMify Tracker -->
+    <script
+      src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+      data-utmify-prevent-xcod-sck
+      data-utmify-prevent-subids
+      async
+      defer
+    ></script>
 </head>
 <body class="pre-venda-page">
     <!-- Header -->
@@ -83,7 +101,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#quiz" class="btn btn-primary btn-lg">SIM! QUERO DESCOBRIR OS ERROS AGORA <i class="fas fa-arrow-right"></i></a>
+                    <a href="#quiz" class="btn btn-primary btn-lg" onclick="fbq('track', 'Lead', {content_name: 'Quiz Iniciado'});">SIM! QUERO DESCOBRIR OS ERROS AGORA <i class="fas fa-arrow-right"></i></a>
                     <p class="confidence-builder"><small><i class="fas fa-lock"></i> Mais de 17.893 mulheres já descobriram o segredo. <b>É a SUA vez!</b></small></p>
                 </div>
             </div>
@@ -199,11 +217,11 @@
                             </div>
                             
                             <div class="cta-final">
-                                <a href="home.html#pricing" class="btn btn-cta pulse">
-                                    QUERO CONHECER A SOLUÇÃO COMPLETA <i class="fas fa-arrow-right"></i>
+                                <a href="home.html#pricing" class="btn btn-cta pulse" onclick="fbq('track', 'ViewContent', {content_name: 'Quiz Finalizado - Ver Oferta'});">
+                                    QUERO A SOLUÇÃO COMPLETA AGORA <i class="fas fa-arrow-right"></i>
                                 </a>
                                 
-                                <p class="cta-note">Clique no botão acima para ver como resolver o problema de forma definitiva</p>
+                                <p class="cta-note">Clique no botão acima para resolver o problema de forma definitiva</p>
                             </div>
                         </div>
                         

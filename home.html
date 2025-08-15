@@ -28,6 +28,30 @@
     <link rel="stylesheet" href="css/extras.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/real-images.css">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '962970978795398'); // seu ID
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+
+    <!-- UTMify Tracker -->
+    <script
+      src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+      data-utmify-prevent-xcod-sck
+      data-utmify-prevent-subids
+      async
+      defer
+    ></script>
 </head>
 <body>
     <!-- Header -->
@@ -76,8 +100,8 @@
             </div>
             
             <div class="cta-buttons" data-aos="fade-up" data-aos-delay="800">
-                <a href="index.html" class="btn btn-secondary btn-large">FAÇA O TESTE GRATUITO</a>
-                <a href="#pricing" class="btn btn-large">EU QUERO COMEÇAR AGORA</a>
+                <a href="index.html" class="btn btn-secondary btn-large" onclick="fbq('track', 'Lead', {content_name: 'Teste Gratuito'});">FAÇA O TESTE GRATUITO</a>
+                <a href="#pricing" class="btn btn-large" onclick="fbq('track', 'ViewContent', {content_name: 'Oferta Principal'});">EU QUERO COMEÇAR AGORA</a>
             </div>
         </div>
     </section>
@@ -279,10 +303,10 @@
             
             <div class="price-box" data-aos="fade-up" data-aos-delay="200">
                 <div class="today-only">SOMENTE HOJE - OFERTA ESPECIAL</div>
-                <div class="discount-badge">80% OFF</div>
+                <div class="discount-badge">95% OFF</div>
                 <div class="original-price">De R$ 497,00 por apenas:</div>
-                <div class="current-price">R$ 97,00</div>
-                <p>ou em até 12x de R$ 9,74 no cartão</p>
+                <div class="current-price">R$ 20,00</div>
+                <p>Preço único - Sem parcelamento</p>
                 <div class="timer-box">
                     <p>Esta oferta expira em:</p>
                     <div class="countdown" id="countdown">
@@ -301,8 +325,8 @@
                     </div>
                 </div>
                 <div class="cta-buttons">
-                    <a href="index.html" class="btn btn-secondary">FAZER O TESTE ANTES</a>
-                    <a href="https://pay.hotmart.com/XXXXXXX" class="btn btn-large pulse">QUERO COMPRAR AGORA <i class="fas fa-arrow-right"></i></a>
+                    <a href="index.html" class="btn btn-secondary" onclick="fbq('track', 'Lead', {content_name: 'Teste Antes Compra'});">FAZER O TESTE ANTES</a>
+                    <a href="https://pay.kirvano.com/82054377-6262-4a80-94c8-363a30c478ac" class="btn btn-large pulse" onclick="fbq('track', 'Purchase', {content_name: 'Compra Final', value: 20, currency: 'BRL'});">QUERO COMPRAR AGORA <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
                 <div class="guarantee">
@@ -410,21 +434,6 @@
             duration: 800,
             once: true
         });
-        
-        // Countdown Timer
-        function updateCountdown() {
-            const now = new Date();
-            const hours = 23 - now.getHours();
-            const minutes = 59 - now.getMinutes();
-            const seconds = 59 - now.getSeconds();
-            
-            document.getElementById('hours').innerText = hours < 10 ? '0' + hours : hours;
-            document.getElementById('minutes').innerText = minutes < 10 ? '0' + minutes : minutes;
-            document.getElementById('seconds').innerText = seconds < 10 ? '0' + seconds : seconds;
-        }
-        
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
         
         // FAQ Toggle
         const faqQuestions = document.querySelectorAll('.faq-question');
