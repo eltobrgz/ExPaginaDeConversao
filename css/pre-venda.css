@@ -295,9 +295,10 @@
 
 .result-header h3 {
     font-size: 1.4rem;
-    color: #333;
+    color: white;
     font-weight: 700;
     margin: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
 .result-content p {
@@ -445,6 +446,7 @@
     background-color: #f9f4f9;
     border-radius: 8px;
     padding: 20px;
+    color: var(--text-color);
 }
 
 .benefits-list li {
@@ -506,6 +508,7 @@
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
+    color: var(--text-color);
 }
 
 .testimonial-card:hover {
@@ -571,6 +574,7 @@
     margin: 40px 0 20px;
     position: relative;
     overflow: hidden;
+    color: var(--text-color);
 }
 
 .cta-header {
@@ -612,6 +616,7 @@
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
     margin-bottom: 30px;
+    color: var(--text-color);
 }
 
 .product-image {
@@ -725,6 +730,7 @@
     text-align: center;
     position: relative;
     overflow: hidden;
+    color: var(--text-color);
 }
 
 .today-only {
@@ -871,6 +877,7 @@
     padding: 15px;
     margin-top: 30px;
     border-radius: 0 4px 4px 0;
+    color: #856404;
 }
 
 .urgency-box i {
